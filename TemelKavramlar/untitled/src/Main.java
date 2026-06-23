@@ -82,8 +82,30 @@ public class Main {
 //                break;
 //        }
 //        Eğer tek bir değişkenin farklı sabit değerlere göre dallanmasını istiyorsan switch daha okunaklıdır.
-//        Koşulların karşılaştırma operatörleri veya birden fazla mantıksal ifade içeriyorsa if-else doğru seçimdir.
-
+//for (int i = 1; i <= 2; ++i) {
+////            for (int j = 1; j < 4; ++j) {
+////                if (i == 1) continue;
+////                System.out.print(i + j);
+////            }
+////        }
+////
+////        for (int k = 0; k < 9; k++) {
+////            System.out.print("*");
+////            if (k == 3) break;
+////
+////        }        Koşulların karşılaştırma operatörleri veya birden fazla mantıksal ifade içeriyorsa if-else doğru seçimdir.
+//        for (int i = 1; i <= 2; ++i) {
+//            for (int j = 1; j < 4; ++j) {
+//                if (i == 1) continue;
+//                System.out.print(i + j);
+//            }
+//        }
+//
+//        for (int k = 0; k < 9; k++) {
+//            System.out.print("*");
+//            if (k == 3) break;
+//
+//        }
     }
 
-}
+    }
