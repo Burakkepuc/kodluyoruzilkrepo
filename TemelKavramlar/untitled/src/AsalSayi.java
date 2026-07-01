@@ -12,6 +12,7 @@ public class AsalSayi {
                 // Eğer Dış döngü içe tam bölünüyorsa asal değil.
                 if(i % j == 0){
                     asalMi = false;
+                    break;
                 }
             }
             if (asalMi){
