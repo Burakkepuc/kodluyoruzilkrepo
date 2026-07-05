@@ -8,8 +8,6 @@ public class PalindromSayi {
         int sayi = input.nextInt();
 
         System.out.println(isPalindrom(sayi));
-
-
     }
 
 
