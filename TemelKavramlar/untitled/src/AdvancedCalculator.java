@@ -23,19 +23,22 @@ public class AdvancedCalculator {
         if (b == 0) {
             System.out.println("0'a bölünemez");
             return 0;
-        };
+        }
+        ;
         int result = a / b;
         System.out.println("Bölme : " + result);
         return result;
     }
+
     static int pow(int taban, int us) {
         int result = 1;
-        for (int i = 0; i < us ; i++) {
+        for (int i = 0; i < us; i++) {
             result = result * taban;
         }
-        System.out.println("Mod alma: " + result);
+        System.out.println("Üs alma: " + result);
         return result;
     }
+
     static int remainder(int a, int b) {
         int result = a % b;
         System.out.println("Mod alma: " + result);
@@ -44,7 +47,7 @@ public class AdvancedCalculator {
 
     static int rectAreaAndPerim(int a, int b) {
         int area = a * b;
-        int perimeter = 2 *(a+b);
+        int perimeter = 2 * (a + b);
         System.out.println("Dikdörtgenin alanı: " + area);
         System.out.println("Dikdörtgenin çevresi: " + perimeter);
         return area;
@@ -61,9 +64,17 @@ public class AdvancedCalculator {
                 + "5- Üslü Sayı Hesaplama\n"
                 + "6- Mod alma\n"
                 + "7- Dikdörtgen Alan ve Çevre Hesabı\n"
+                + "8- AC\n"
                 + "0- Çıkış";
 
+        System.out.print("İlk sayıyı giriniz: ");
+        int result = scan.nextInt();
+
+
         while (true) {
+            System.out.println("--------------------");
+            System.out.println("Mevcut Sonuç : " + result);
+            System.out.println("--------------------");
             System.out.println(menu);
             System.out.print("Bir işlem seçiniz: ");
             select = scan.nextInt();
@@ -71,33 +82,36 @@ public class AdvancedCalculator {
             if (select == 0)
                 break;
 
-            System.out.print("İlk sayı: ");
-            int a = scan.nextInt();
-            System.out.print("İkinci sayı: ");
-            int b = scan.nextInt();
-            int result = 0;
+            if (select == 8) {
+                System.out.print("Yeni başlangıç sayısını giriniz: ");
+                result = scan.nextInt();
+                continue; // Döngünün başına dön, alttaki işlemleri pas geç
+            }
+
+            System.out.println("Sayı giriniz: ");
+            int number = scan.nextInt();
 
             switch (select) {
                 case 1:
-                    sum(a, b);
+                    result = sum(result, number);
                     break;
                 case 2:
-                    subtraction(a, b);
+                    result = subtraction(result, number);
                     break;
                 case 3:
-                    multiply(a, b);
+                    result = multiply(result, number);
                     break;
                 case 4:
-                    division(a, b);
+                    result = division(result, number);
                     break;
                 case 5:
-                    pow(a,b);
+                    result = pow(result, number);
                     break;
                 case 6:
-                    remainder(a,b);
+                    result = remainder(result, number);
                     break;
                 case 7:
-                    rectAreaAndPerim(a,b);
+                    result = rectAreaAndPerim(result, number);
                     break;
                 default:
                     System.out.println("Yanlış seçim ! Tekrar seçiniz.");
